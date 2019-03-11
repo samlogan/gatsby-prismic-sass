@@ -1,0 +1,185 @@
+/*=============================================>>>>>
+= Modal Helper =
+===============================================>>>>>*/
+
+circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+// Prevent background scroll when modal open
+.modal-open {
+  overflow: hidden;
+}
+// Modal Styling
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background: rgba($black, 0.4);
+  padding: 5% 20px;
+  @include media-down(small-mobile) {
+    padding: 5% 15px;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 550px;
+    max-height: 90%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: $white;
+    border-radius: 3px;
+    @include media-up(giant) {
+      width: 600px;
+    }
+    @include media-down(small-mobile) {
+      width: calc(100% - 30px);
+    }
+  }
+  &.full-screen {
+    .modal-content {
+      width: 95vw;
+      height: 95vh;
+      max-height: 95vh;
+    }
+  }
+  &.iframe-modal {
+    .modal-content {
+      .iframe-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      iframe {
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+  .modal-content-title {
+    padding: 0 15px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: $off-white 1px solid;
+    h3 {
+      font-size: 18px;
+    }
+    .close {
+      font-size: 0;
+      line-height: 1em;
+      color: $textcolor;
+      &:before {
+        @include icon($icon-close);
+        font-size: 16px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .modal-content-body {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    background: $off-white;
+    .fields {
+      .field-heading {
+        &:first-child {
+          border-top: 0;
+        }
+      }
+      .react-select-field {
+        padding-bottom: 10px;
+      }
+      .checkboxes-field {
+        padding-bottom: 15px;
+      }
+    }
+  }
+  .modal-content-list {
+    padding: 10px 0 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .modal-content-list-item {
+    padding: 10px 15px;
+    width: 100%;
+    &.timestamp {
+      border-top: $off-white 1px solid;
+      padding-top: 20px;
+      margin: 10px 0 0;
+    }
+    small {
+      flex: 1;
+      font-size: 11px;
+      color: darken($off-white, 20%);
+    }
+    &.split {
+      width: 50%;
+    }
+  }
+  .modal-content-list-item-title {
+    color: darken($off-white, 30%);
+    margin: 0 0 4px;
+    min-width: 100%;
+  }
+  .modal-content-list-item-content {
+    display: flex;
+    font-size: 15px;
+    input, .fill-row {
+      flex: 1;
+      line-height: 1em;
+      @include ellipsis();
+    }
+    .tags-list {
+      padding-top: 2px;
+      .tag {
+        margin: 4px 8px 0 0;
+      }
+    }
+  }
+  .model-content-list-item-sublist {
+    a {
+      width: 100%;
+      padding: 5px 0;
+      display: block;
+    }
+  }
+  .modal-footer {
+    border-top: $off-white 1px solid;
+    padding: 20px 15px 30px;
+  }
+  .modal-footer-actions {
+    display: flex;
+    justify-content: space-between;
+    .button {
+      width: auto;
+      min-width: 110px;
+    }
+  }
+  .loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+}

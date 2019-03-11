@@ -1,0 +1,13 @@
+.video-bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover!important;
+  .video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+  }
+}

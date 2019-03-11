@@ -1,0 +1,33 @@
+.footer {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: rgba($white, 0.1) 1px solid;
+    padding: 20px;
+    @include media-down(mobile) {
+      text-align: center;
+    }
+    .logo {
+      @include media-down(mobile) {
+        margin: 0 auto 15px;
+      }
+    }
+  }
+  .sitemap {
+    font-size: 14px;
+    @include media-down(mobile) {
+      width: 100%;
+    }
+    .legal {
+      // &:after {
+      //   content: '-';
+      //   margin: 0 5px;
+      // }
+    }
+    a {
+      color: $white;
+    }
+  }
+}

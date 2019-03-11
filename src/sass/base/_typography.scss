@@ -1,0 +1,25 @@
+/*=============================================>>>>>
+= Typography Mixins and Variables =
+===============================================>>>>>*/
+
+// Font weight variables
+// NOTE: Use 400 and 700 weights only
+// $font-weight-thin: 100;
+// $font-weight-extra-light: 200;
+// $font-weight-light: 300;
+$font-weight-regular: 400;
+// $font-weight-medium: 500;
+// $font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+// $font-weight-extra-bold: 800;
+// $font-weight-black: 900;
+
+
+@mixin headings-font() {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: $font-weight-regular;
+}
+
+@mixin body-font() {
+  font-family: 'Lato', Sans-Serif;
+}

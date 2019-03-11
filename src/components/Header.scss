@@ -1,0 +1,17 @@
+.header {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+  }
+}
+
+.header-navigation {
+  .button {
+    padding: 5px 15px;
+    &.outline {
+      color: $white;
+    }
+  }
+}

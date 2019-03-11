@@ -1,0 +1,13 @@
+.gatsby-image {
+  height: 100%;
+  width: 100%;
+  position: absolute!important;
+
+  &.placeholder {
+    background-color: lightgrey;
+  }
+
+  img {
+    object-position: center center!important;
+  }
+}

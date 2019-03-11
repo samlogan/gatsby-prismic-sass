@@ -1,0 +1,24 @@
+.not-found-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 340px;
+  padding: 180px 0 100px;
+}
+
+.not-found-image {
+  margin: 0 auto;
+  max-width: 250px;
+}
+
+.not-found-text {
+  text-align: center;
+  padding: 50px 0 0;
+  h2 {
+    font-size: 30px;
+    color: $primary;
+  }
+  .button {
+    margin: 35px 0 0;
+  }
+}

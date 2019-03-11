@@ -1,0 +1,55 @@
+/*=============================================>>>>>
+= App Styles =
+===============================================>>>>>*/
+body {
+  background: $white;
+  color: $textcolor;
+}
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include media-down(small-mobile) {
+    padding: 0 10px;
+  }
+}
+
+.buttons {
+  display: flex;
+  .button {
+    margin: 10px 10px 0 0!important;
+  }
+}
+
+.button {
+  border: 1px solid $primary;
+  background: $primary;
+  border-radius: 3px;
+  padding: 6px 25px;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: $white;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    border-color: $secondary;
+    background: $secondary;
+    text-decoration: none;
+  }
+  &.black {
+    border-color: $black;
+    background: $black;
+    &:hover {
+      border-color: $black;
+      background: $black;
+    }
+  }
+  &.outline {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+  }
+}

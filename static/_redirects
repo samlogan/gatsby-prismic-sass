@@ -1,0 +1,6 @@
+# Redirect netlify sitename to your sitename for SEO purposes
+http://example.netlify.com/* https://www.example.com/:splat 301!
+https://example.netlify.com/* https://www.example.com/:splat 301!
+
+# Also redirect http to https for your custom domain
+http://www.example.com/* https://www.example.com/:splat 301!
