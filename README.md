@@ -27,9 +27,7 @@ Gatsby Starter which uses the Headless CMS [Prismic](https://prismic.io/).
 
 ### Quick start guide
 
-The easiest way to deploy this starter is to use the same setup, meaning that your Prismic repository is configured the same way as this starter. The rest of this README aims to explain exactly that. You can read through the instructions with this high-level overview in mind:
-
-1. Clone and install the starter
+1. Clone and install the repo
 2. Register an account on Prismic
 3. Configure your custom types
 4. Create an API key and store it in an ENV variable
@@ -41,26 +39,33 @@ The easiest way to deploy this starter is to use the same setup, meaning that yo
 
 You have to know the basics of Prismic's interface in order to be able to make the necessary changes / setup your project accordingly. You can also checkout the document ["Sourcing from Prismic"](https://www.gatsbyjs.org/docs/sourcing-from-prismic/).
 
-### gatsby-config
+### Create .env files
 
-#### repositoryName
+Use `.env.template` to generate `.env.development` and `.env.production` files containing the following ENV variables
 
-Don't forget to change the default `repositoryName` in the plugin's option. The `repositoryName` is the name you have entered at the creation of the repository (you’ll also find it as the subdomain in the URL)
+#### SITE_URL
 
-#### API key
+This is the frontend URL of your project, for development it will be http://localhost:8000 or similar
 
-You need to define the API Key for your Prismic repository in `gatsby-config.js` ([Video tutorial](https://www.youtube.com/watch?v=iH0P4KcOeVc)). You can retrieve the key here:
+#### PRISMIC_REPO_NAME
+
+Don't forget to change the default `PRISMIC_REPO_NAME` env variable. The `PRISMIC_REPO_NAME` is the name you have entered at the creation of the repository (you’ll also find it as the subdomain in the URL)
+
+#### API_KEY
+
+You need to define the `API_KEY` for your Primis project. You can retrieve the key here:
 
 - You can generate an access token in the **API & Security** section of your repository settings. Setting a **Callback URL** is not necessary.
 - The token will be listed under "Permanent access tokens".
 
-It's best to store the API Key in an environment variable. Create the file `.env.development` in the root dir of your project. Its content should be:
 
-`API_KEY=YOURKEYHERE`
+#### IS_STAGING
 
-If you deploy to Netlify you can also setup an environment variable.
+Specifies whether the site is in staging, setting this variable will ensure the site is not crawlable by search engines. Remove this variable if you are deploying to the production URL and you want the site indexed.
 
-More information on the source plugin: [gatsby-source-prismic](https://github.com/angeloashmore/gatsby-source-prismic)
+### Netlify
+
+If you deploy to Netlify you will need to use their UI to create the above build variables. See instructions [here](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables)
 
 ## Development
 
