@@ -9,7 +9,7 @@ class Footer extends Component {
         <div className="wrapper">
           <Logo />
           <div className="sitemap">
-            <span className="legal">© Copyright {new Date().getFullYear()} Brainbox Games Ltd</span>
+            <span className="legal">© Copyright {new Date().getFullYear()}</span>
           </div>
         </div>
       </footer>
