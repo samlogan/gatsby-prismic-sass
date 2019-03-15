@@ -41,5 +41,42 @@
         }
       }
     }
+  },
+  "SEO" : {
+    "meta_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Meta Title",
+        "placeholder" : "Enter meta title"
+      }
+    },
+    "meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Meta Description",
+        "placeholder" : "Enter meta description"
+      }
+    },
+    "schema" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "preformatted",
+        "label" : "Schema",
+        "placeholder" : "Enter JSON schema"
+      }
+    },
+    "open_graph_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1200,
+          "height" : 630
+        },
+        "thumbnails" : [ ],
+        "label" : "Open Graph Image"
+      }
+    }
   }
 }

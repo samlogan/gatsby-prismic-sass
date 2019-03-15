@@ -6,7 +6,7 @@ import Twitter from './Twitter';
 
 // Complete tutorial: https://www.gatsbyjs.org/docs/add-seo-component/
 
-const SEO = ({ title, desc, banner, pathname, article, node }) => {
+const SEO = ({ title, desc, banner, schema, pathname, article, node }) => {
   const { site } = useStaticQuery(query);
 
   const {
@@ -16,7 +16,6 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
       defaultTitle,
       defaultDescription,
       defaultBanner,
-      headline,
       siteLanguage,
       ogLanguage,
       author,
@@ -40,11 +39,11 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
     '@context': 'http://schema.org',
     '@type': 'WebPage',
     url: siteUrl,
-    headline,
+    headline: seo.title,
     inLanguage: siteLanguage,
     mainEntityOfPage: siteUrl,
-    description: defaultDescription,
-    name: defaultTitle,
+    description: seo.description,
+    name: seo.title,
     author: {
       '@type': 'Person',
       name: author,
@@ -150,8 +149,8 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
         <meta name="image" content={seo.image} />
         <meta name="gatsby-starter" content="Gatsby Starter Prismic" />
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
-        {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
-        {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
+        {!article && <script type="application/ld+json">{JSON.stringify(schema || schemaOrgWebPage)}</script>}
+        {article && <script type="application/ld+json">{JSON.stringify(schema || schemaArticle)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Helmet>
       <Facebook
@@ -179,7 +178,6 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         defaultBanner: banner
-        headline
         siteLanguage
         ogLanguage
         author
