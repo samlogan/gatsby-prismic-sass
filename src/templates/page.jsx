@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { Layout } from '../components';
 import * as Slices from '../slices';
 
-export const Slice = ({ data, openSignUpModal }) => {
+export const Slice = ({ data }) => {
   const { slice_type: sliceType } = data;
   // Convert slice type from snake_case to TitleCase
   if (!sliceType) return null;
@@ -11,7 +11,7 @@ export const Slice = ({ data, openSignUpModal }) => {
     .map(item => item.charAt(0).toUpperCase() + item.substring(1))
     .join('');
   const CustomSlice = Slices[sliceName];
-  return <CustomSlice data={data} openSignUpModal={openSignUpModal} />;
+  return <CustomSlice data={data} />;
 };
 
 class Page extends Component {
@@ -21,9 +21,9 @@ class Page extends Component {
       location,
     } = this.props;
     return (
-      <Layout location={location} openSignUpModal={this.openSignUpModal}>
+      <Layout location={location}>
         {page.data.body.map(slice => (
-          <Slice key={slice.id} data={slice} openSignUpModal={this.openSignUpModal} />
+          <Slice key={slice.id} data={slice} />
         ))}
       </Layout>
     );
