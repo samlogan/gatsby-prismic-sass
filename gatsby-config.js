@@ -2,10 +2,16 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+// Configuration file
 const website = require('./config/website');
 
+// Schemas
+const pageSchema = require('./.prismic/page.json');
+
+// Path prefix
 const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix;
 
+// Environment variables
 const {
   IS_STAGING,
   SITE_URL,
@@ -60,7 +66,7 @@ module.exports = {
         accessToken: API_KEY,
         linkResolver: () => doc => `/${doc.uid}`,
         schemas: {
-          page: require('./.prismic/page.json'),
+          page: pageSchema,
         },
       },
     },
