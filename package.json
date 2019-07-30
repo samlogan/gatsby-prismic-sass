@@ -15,7 +15,7 @@
     "format": "prettier \"**/*.md \" --write"
   },
   "dependencies": {
-    "gatsby": "^2.1.4",
+    "gatsby": "^2.5.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-brotli": "^1.0.0",
     "gatsby-plugin-canonical-urls": "^2.0.10",
@@ -30,7 +30,7 @@
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-plugin-sitemap": "^2.0.6",
-    "gatsby-source-prismic": "^2.2.0",
+    "gatsby-source-prismic": "^3.0.0",
     "gatsby-transformer-sharp": "^2.1.13",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",

@@ -58,6 +58,9 @@ module.exports = {
       options: {
         repositoryName: PRISMIC_REPO_NAME,
         accessToken: API_KEY,
+        schemas: {
+          page: require('./.prismic/page.json'),
+        },
         // Get the correct URLs in blog posts
         linkResolver: () => post => `/${post.uid}`,
       },
