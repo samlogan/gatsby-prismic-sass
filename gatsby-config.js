@@ -49,6 +49,7 @@ module.exports = {
     author: website.author,
     twitter: website.twitter,
     facebook: website.facebook,
+    prismicRepo: PRISMIC_REPO_NAME,
   },
   /* Plugins */
   plugins: [
@@ -58,9 +59,15 @@ module.exports = {
       options: {
         repositoryName: PRISMIC_REPO_NAME,
         accessToken: API_KEY,
-        // Get the correct URLs in blog posts
-        linkResolver: () => post => `/${post.uid}`,
+        linkResolver: ({ node, key, value }) => doc => `/${doc.uid}`,
+        schemas: {
+          page: require('./.prismic/page.json'),
+        },
       },
+    },
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: { prefixes: ['/preview/*', '/unpublishedPreview/*'] },
     },
     {
       resolve: 'gatsby-plugin-sass',
