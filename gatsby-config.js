@@ -49,6 +49,7 @@ module.exports = {
     author: website.author,
     twitter: website.twitter,
     facebook: website.facebook,
+    prismicRepo: PRISMIC_REPO_NAME,
   },
   /* Plugins */
   plugins: [
