@@ -48,11 +48,7 @@ module.exports = {
     ogLanguage: website.ogLanguage,
     author: website.author,
     twitter: website.twitter,
-<<<<<<< Updated upstream
-    facebook: website.facebook,
-=======
     prismicRepo: PRISMIC_REPO_NAME,
->>>>>>> Stashed changes
   },
   /* Plugins */
   plugins: [
@@ -62,12 +58,15 @@ module.exports = {
       options: {
         repositoryName: PRISMIC_REPO_NAME,
         accessToken: API_KEY,
+        linkResolver: () => doc => `/${doc.uid}`,
         schemas: {
           page: require('./.prismic/page.json'),
         },
-        // Get the correct URLs in blog posts
-        linkResolver: () => post => `/${post.uid}`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: { prefixes: ['/preview/*', '/unpublishedPreview/*'] },
     },
     {
       resolve: 'gatsby-plugin-sass',
