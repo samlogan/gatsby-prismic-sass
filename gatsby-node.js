@@ -39,6 +39,9 @@ exports.createPages = async ({ graphql, actions }) => {
   // const blogPostsList = blogPosts.data.allPrismicBlogPosts.edges;
 
   // Loop through all pages and create a new page for each based on its uid
+  if (!pageList.find(edge => edge.node.uid === 'home')) {
+    throw Error('Create page with slug home');
+  }
   pageList.forEach(edge => {
     createPage({
       path: `/${edge.node.uid === 'home' ? '' : edge.node.uid}`,

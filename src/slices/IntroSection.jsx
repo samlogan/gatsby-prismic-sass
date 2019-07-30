@@ -8,7 +8,7 @@ export const IntroSection = props => {
     <section className="intro-section">
       <div className="wrapper">
         <h1>{title.text}</h1>
-        <h2>{subtitle.text}</h2>
+        <p dangerouslySetInnerHTML={{ __html: subtitle.html }} />
       </div>
     </section>
   );

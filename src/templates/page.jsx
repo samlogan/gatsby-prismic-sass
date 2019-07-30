@@ -18,11 +18,19 @@ export const Slice = ({ data }) => {
 };
 
 export const Page = ({ location, data: staticData }) => {
+  console.log('staticData', staticData);
   const previewData = IS_BROWSER && window.__PRISMIC_PREVIEW_DATA__;
+  console.log('previewData', previewData);
   const data = mergePrismicPreviewData({ staticData, previewData });
   const { page } = data;
   const { data: pageData } = page;
-  const { body: sliceData, metaTitle, metaDesc, ogImage, schema } = pageData;
+  const {
+    body: sliceData,
+    meta_title: metaTitle,
+    meta_description: metaDesc,
+    open_graph_image: ogImage,
+    schema,
+  } = pageData;
   const seo = {
     title: metaTitle.text,
     desc: metaDesc.text,
@@ -46,21 +54,14 @@ export const pageQuery = graphql`
       id
       uid
       data {
-        metaTitle: meta_title {
+        meta_title {
           text
         }
-        metaDesc: meta_description {
+        meta_description {
           text
         }
-        ogImage: open_graph_image {
+        open_graph_image {
           url
-          localFile {
-            childImageSharp {
-              fixed(width: 1200, height: 680, quality: 90) {
-                src
-              }
-            }
-          }
         }
         schema {
           text
