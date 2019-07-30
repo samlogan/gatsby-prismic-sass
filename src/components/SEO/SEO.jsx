@@ -16,11 +16,11 @@ const SEO = ({ title, desc, banner, schema, pathname, article, node }) => {
       defaultTitle,
       defaultDescription,
       defaultBanner,
+      siteName,
       siteLanguage,
       ogLanguage,
       author,
       twitter,
-      facebook,
     },
   } = site;
 
@@ -160,7 +160,7 @@ const SEO = ({ title, desc, banner, schema, pathname, article, node }) => {
         type={article ? 'article' : 'website'}
         url={seo.url}
         locale={ogLanguage}
-        name={facebook}
+        name={siteName}
       />
       <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
     </>
@@ -182,7 +182,6 @@ const query = graphql`
         ogLanguage
         author
         twitter
-        facebook
       }
     }
   }

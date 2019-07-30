@@ -100,7 +100,7 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
   title: 'Gatsby Prismic', // Default Site Title used for PWA
   description: 'A unopinionated Gatsby Starter which uses the Headless CMS Prismic.',
-  headline: 'Lean Gatsby Prismic starter', // Headline for schema.org JSONLD
+  siteName: 'Lean Gatsby Prismic starter', // Sitename for Facebook
   siteLanguage: 'en', // Language Tag on <html> element
   banner: '/logos/logo-1024.png', // Default OpenGraph image
   ogLanguage: 'en_US', // Facebook Language
@@ -113,6 +113,5 @@ module.exports = {
   backgroundColor: '#EBEDF2',
 
   twitter: '', // Twitter Username
-  facebook: '', // Facebook Site Name
   googleAnalyticsID: '',
 }

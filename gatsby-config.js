@@ -43,12 +43,16 @@ module.exports = {
     title: website.title,
     description: website.description,
     banner: website.banner,
-    headline: website.headline,
+    siteName: website.siteName,
     siteLanguage: website.siteLanguage,
     ogLanguage: website.ogLanguage,
     author: website.author,
     twitter: website.twitter,
+<<<<<<< Updated upstream
     facebook: website.facebook,
+=======
+    prismicRepo: PRISMIC_REPO_NAME,
+>>>>>>> Stashed changes
   },
   /* Plugins */
   plugins: [

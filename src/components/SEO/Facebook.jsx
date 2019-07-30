@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const Facebook = ({ url, name, type, title, desc, image, locale }) => {
-  if (!name) return null;
+  if (!image || !name) return null;
   return (
     <Helmet>
       {name && <meta property="og:site_name" content={name} />}
