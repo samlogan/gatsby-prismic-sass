@@ -4,6 +4,6 @@ import './Logo.scss';
 
 export const Logo = () => (
   <Link className="logo" to="#">
-    BrainBox
+    Logo
   </Link>
 );
