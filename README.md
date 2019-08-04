@@ -5,6 +5,7 @@ Gatsby Starter which uses the Headless CMS [Prismic](https://prismic.io/).
 ## Features
 
 - Prismic as Headless CMS
+- Prismic preview functionality - [see here](https://github.com/angeloashmore/gatsby-source-prismic/blob/v3-beta/docs/previews.md)
 - Responsive images (gatsby-image)
   - The right image size for every screen size
   - Traced SVG Loading (Lazy-Loading)
@@ -16,6 +17,8 @@ Gatsby Starter which uses the Headless CMS [Prismic](https://prismic.io/).
   - OpenGraph Tags
   - Twitter Tags
   - Favicons
+  - Google Tag Manager
+  - Robots.txt generator
 - Offline Support
 - Brotli Compression
 - WebApp Manifest Support
