@@ -28,7 +28,16 @@ export default class Video extends Component {
         className={`video-bg-container ${className || ''}`}
         style={{ background: `url('${placeholder}') center no-repeat` }}
       >
-        <video preload="true" autoPlay muted loop className="video" id={id} style={{ opacity: videoLoaded ? 1 : 0 }}>
+        <video
+          preload="true"
+          autoPlay
+          playsInline
+          muted
+          loop
+          className="video"
+          id={id}
+          style={{ opacity: videoLoaded ? 1 : 0 }}
+        >
           <source src={src} type={type} />
           Sorry, your browser doesn&#39;t support embedded videos.
         </video>
