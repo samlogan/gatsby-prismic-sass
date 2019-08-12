@@ -31,6 +31,7 @@
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-plugin-sitemap": "^2.0.6",
+    "gatsby-source-filesystem": "^2.1.9",
     "gatsby-source-prismic": "3.0.0-beta.4",
     "gatsby-transformer-sharp": "^2.1.13",
     "node-sass": "^4.11.0",
