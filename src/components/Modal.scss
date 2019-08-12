@@ -83,13 +83,9 @@ circle {
       font-size: 18px;
     }
     .close {
-      font-size: 0;
+      font-size: 14px;
       line-height: 1em;
       color: $textcolor;
-      &:before {
-        @include icon($icon-close);
-        font-size: 16px;
-      }
       &:hover {
         text-decoration: none;
       }
