@@ -67,6 +67,7 @@ export const pageQuery = graphql`
         body {
           ... on PrismicPageBodyIntroSection {
             slice_type
+            id
             primary {
               title {
                 text
