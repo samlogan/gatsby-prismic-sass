@@ -2,13 +2,16 @@
 = Breakpoints =
 ===============================================>>>>>*/
 $breakpoints: (
-  giant: 2200px,
-  large: 1600px,
+  four-k: 2200px,
+  large-desktop: 1600px,
   desktop: 1340px,
-  tablet: 1080px,
-  small-tablet: 960px,
-  mobile: 750px,
-  small-mobile: 400px
+  small-desktop: 1260px,
+  large-tablet: 1025px,
+  tablet: 769px,
+  small-tablet: 660px,
+  large-mobile: 500px,
+  mobile: 400px,
+  small-mobile: 340px
 );
 
 /*=============================================>>>>>
