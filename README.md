@@ -42,6 +42,10 @@ Gatsby Starter which uses the Headless CMS [Prismic](https://prismic.io/).
 
 You have to know the basics of Prismic's interface in order to be able to make the necessary changes / setup your project accordingly. You can also checkout the document ["Sourcing from Prismic"](https://www.gatsbyjs.org/docs/sourcing-from-prismic/).
 
+### Setup the page.json custom type
+
+Get started by using the dummy `.prismic/page.json` custom type. Once inside Prismic go to the Custom types page, click "New", select "Repeatable Type" and enter "Page" as the type name. Toggle from "Build mode" to "JSON editor" in the right sidebar and paste the contents from the page.json file. This will allow you to create your first page with the dummy slice `src/slices/IntroSection.jsx` contained in this boilerplate.
+
 ### Create .env files
 
 Use `.env.template` to generate `.env.development` and `.env.production` files containing the following ENV variables
