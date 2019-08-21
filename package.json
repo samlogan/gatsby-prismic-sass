@@ -39,9 +39,6 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "react-rangeslider": "^2.2.0",
-    "react-switch": "^4.1.0",
-    "react-tippy": "^1.2.3",
     "typeface-lato": "^0.0.54",
     "typeface-titillium-web": "^0.0.72"
   },
