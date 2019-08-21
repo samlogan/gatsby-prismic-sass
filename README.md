@@ -118,3 +118,7 @@ module.exports = {
   twitter: '', // Twitter Username
   googleAnalyticsID: '',
 }
+
+## Typography
+
+This boilerplate is using [NPM Typefaces](https://github.com/KyleAMathews/typefaces) that serves Google (and other) fonts locally to boost performance and allow them to load offline. Out the box it is using [Lato](https://www.npmjs.com/package/typeface-lato) and [Titillium](https://www.npmjs.com/package/typeface-titillium-web) these are imported and can be replaced in `src/components/Layout.jsx`.
