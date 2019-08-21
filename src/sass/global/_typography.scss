@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include headings-font();
+  @include heading-font();
   line-height: 1.2em;
   &:first-child {
     margin-top: 0;

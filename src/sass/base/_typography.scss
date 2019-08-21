@@ -15,7 +15,7 @@ $font-weight-bold: 700;
 // $font-weight-black: 900;
 
 
-@mixin headings-font() {
+@mixin heading-font() {
   font-family: 'Titillium Web', sans-serif;
   font-weight: $font-weight-regular;
 }
