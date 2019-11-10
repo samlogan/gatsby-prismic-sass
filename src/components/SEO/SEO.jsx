@@ -174,10 +174,11 @@ const query = graphql`
     site {
       buildTime(formatString: "YYYY-MM-DD")
       siteMetadata {
-        siteUrl
         defaultTitle: title
         defaultDescription: description
         defaultBanner: banner
+        siteUrl
+        siteName
         siteLanguage
         ogLanguage
         author
