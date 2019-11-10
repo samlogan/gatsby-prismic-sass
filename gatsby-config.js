@@ -115,6 +115,7 @@ module.exports = {
       options: {
         src: path.join(__dirname, 'src'),
         components: path.join(__dirname, 'src/components'),
+        slices: path.join(__dirname, 'src/slices'),
       },
     },
     {
