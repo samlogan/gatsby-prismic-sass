@@ -7,6 +7,7 @@ import { Link } from './Link';
 import { Logo } from './Logo';
 import Modal from './Modal';
 import { Navigation } from './Navigation';
+import { Slice } from './Slice';
 import Video from './Video';
 
-export { SEO, Footer, Header, Image, Layout, Link, Logo, Modal, Navigation, Video };
+export { SEO, Footer, Header, Image, Layout, Link, Logo, Modal, Navigation, Slice, Video };
