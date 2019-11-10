@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const path = require('path');
+
 // Configuration file
 const website = require('./config/website');
 
@@ -104,7 +106,10 @@ module.exports = {
         // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       },
     },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: { name: 'src', path: path.join(__dirname, 'src') },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
