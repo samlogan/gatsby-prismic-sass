@@ -1,18 +1,18 @@
 {
   "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "Enter slug"
+      }
+    },
     "prismic_reference": {
       "type": "StructuredText",
       "config": {
         "single": "heading1",
         "label": "Prismic Reference",
         "placeholder": "Enter Prismic Reference"
-      }
-    },
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "Slug",
-        "placeholder": "Enter slug"
       }
     },
     "body": {
