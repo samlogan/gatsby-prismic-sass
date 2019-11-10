@@ -1,4 +1,5 @@
 import React from 'react';
+import './IntroSection.scss';
 
 export const IntroSection = props => {
   const { data } = props;

@@ -53,18 +53,7 @@ export const pageQuery = graphql`
           text
         }
         body {
-          ... on PrismicPageBodyIntroSection {
-            slice_type
-            id
-            primary {
-              title {
-                text
-              }
-              subtitle {
-                html
-              }
-            }
-          }
+          ...IntroSectionPageFragement
         }
       }
     }

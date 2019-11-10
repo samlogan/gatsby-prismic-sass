@@ -1,3 +1,3 @@
-import { IntroSection } from './IntroSection';
+import { IntroSection } from './IntroSection/IntroSection';
 
 export { IntroSection };
