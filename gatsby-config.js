@@ -111,6 +111,13 @@ module.exports = {
       options: { name: 'src', path: path.join(__dirname, 'src') },
     },
     {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        components: path.join(__dirname, 'src/components'),
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: website.title,
