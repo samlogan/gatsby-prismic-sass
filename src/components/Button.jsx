@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from './Link';
-import './Button.scss';
 
 export const Button = props => {
   const { to, title, children, theme = 'primary', outline } = props;
