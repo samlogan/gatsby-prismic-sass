@@ -1,13 +1,11 @@
 import React from 'react';
-import { Header } from './Header';
-import { Footer } from './Footer';
-import SEO from './SEO';
+import { Footer, Header, SEO } from 'components';
 import 'typeface-titillium-web';
 import 'typeface-lato';
-import '../sass/global/styles.scss';
-import './Layout.scss';
+import '../../sass/global/styles.scss';
+import './styles.scss';
 
-export const Layout = props => {
+const Layout = props => {
   const { children, customSEO } = props;
   return (
     <>
@@ -20,3 +18,5 @@ export const Layout = props => {
     </>
   );
 };
+
+export default Layout;

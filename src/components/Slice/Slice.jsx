@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Slices from 'slices';
 
-export const Slice = props => {
+const Slice = props => {
   const { data } = props;
   const { slice_type: sliceType } = data;
   // Convert slice type from snake_case to TitleCase
@@ -12,3 +12,5 @@ export const Slice = props => {
   const CustomSlice = Slices[sliceName];
   return <CustomSlice {...props} />;
 };
+
+export default Slice;

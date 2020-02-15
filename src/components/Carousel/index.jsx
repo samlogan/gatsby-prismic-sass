@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import './Carousel.scss';
+import './styles.scss';
 
 /* eslint react/destructuring-assignment: 0 */
-export const Carousel = props => {
+const Carousel = props => {
   const { children, disableSlider, enabledBetween, containerClassName = 'carousel' } = props;
 
   // Track viewport width is enabledBetween prop is set
@@ -66,3 +66,5 @@ export const Carousel = props => {
     </div>
   );
 };
+
+export default Carousel;

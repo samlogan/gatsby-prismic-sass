@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from './Link';
+import { Link } from 'components';
 
-export const Button = props => {
+const Button = props => {
   const { to, title, children, theme = 'primary', outline } = props;
   return (
     <Link to={to} title={title || ''} className={`button ${theme} ${outline ? 'outline' : ''}`}>
@@ -9,3 +9,5 @@ export const Button = props => {
     </Link>
   );
 };
+
+export default Button;

@@ -1,13 +1,7 @@
-import SEO from './SEO';
-import { Footer } from './Footer';
-import { Header } from './Header';
-import { Image } from './Image';
-import { Layout } from './Layout';
-import { Link } from './Link';
-import { Logo } from './Logo';
-import Modal from './Modal';
-import { Navigation } from './Navigation';
-import { Slice } from './Slice';
-import Video from './Video';
+const context = require.context('./', true, /\.\/[^/]+\/index\.jsx$/);
 
-export { SEO, Footer, Header, Image, Layout, Link, Logo, Modal, Navigation, Slice, Video };
+context.keys().forEach(filePath => {
+  // Remove the './' and './svg' from the object key
+  const componentName = filePath.replace(/^.+\/([^/]+)\/index\.jsx/, '$1');
+  module.exports[componentName] = context(filePath).default;
+});

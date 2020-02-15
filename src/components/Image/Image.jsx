@@ -1,8 +1,8 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import './Image.scss';
+import './styles.scss';
 
-export const Image = props => {
+const Image = props => {
   const { image, className = '' } = props;
   if (!image) return <div className={`gatsby-image placeholder ${className}`} />;
   if (image.localFile && image.localFile.childImageSharp && image.localFile.childImageSharp.fluid) {
@@ -19,3 +19,5 @@ export const Image = props => {
   }
   return <div className={`gatsby-image placeholder ${className}`} />;
 };
+
+export default Image;

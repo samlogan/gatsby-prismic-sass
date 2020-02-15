@@ -1,6 +1,5 @@
 import React from 'react';
-import { Logo } from './Logo';
-import { Navigation } from './Navigation';
+import { Logo, Navigation } from 'components';
 import './Header.scss';
 
 const navigationLinks = [{ to: '#', text: 'Example Link', className: '' }];

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { siteName } from '../../config/website';
-import './Logo.scss';
+import { siteName } from '../../../config/website';
+import './styles.scss';
 
-export const Logo = () => (
+const Logo = () => (
   <Link className="logo" to="#">
     {siteName}
   </Link>
 );
+
+export default Logo;

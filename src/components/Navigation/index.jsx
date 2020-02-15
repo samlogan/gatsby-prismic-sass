@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-export const Navigation = props => {
+const Navigation = props => {
   const { classNamePrefix = 'main', links } = props;
   const className = classNamePrefix ? `${classNamePrefix}-navigation` : 'navigation';
   return (
@@ -14,3 +14,5 @@ export const Navigation = props => {
     </nav>
   );
 };
+
+export default Navigation;

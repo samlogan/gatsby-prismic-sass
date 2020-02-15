@@ -48,6 +48,7 @@
     "import": 0,
     "func-names": 0,
     "import/no-cycle": 0,
+    "import/named": 0,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
     "space-before-function-paren": 0,
@@ -86,6 +87,8 @@
       }
     ],
     "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
     "jsx-a11y/anchor-is-valid": [
       "warn",
       {
