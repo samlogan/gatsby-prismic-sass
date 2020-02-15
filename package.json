@@ -41,8 +41,7 @@
     "react-alice-carousel": "^1.15.3",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "typeface-lato": "^0.0.54",
-    "typeface-titillium-web": "^0.0.72"
+    "typeface-lato": "^0.0.54"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
