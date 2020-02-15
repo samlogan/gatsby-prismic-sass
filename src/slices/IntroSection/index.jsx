@@ -1,7 +1,7 @@
 import React from 'react';
-import './IntroSection.scss';
+import './styles.scss';
 
-export const IntroSection = props => {
+const IntroSection = props => {
   const { data } = props;
   const { primary } = data;
   const { title, subtitle } = primary;
@@ -14,3 +14,5 @@ export const IntroSection = props => {
     </section>
   );
 };
+
+export default IntroSection;
