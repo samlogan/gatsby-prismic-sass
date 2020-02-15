@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import { Layout } from 'components';
-import FourOhFourImage from '../images/404.svg';
+import FourOhFourImage from 'images/404.svg';
 import './404.scss';
 
 class FourOhFour extends Component {
