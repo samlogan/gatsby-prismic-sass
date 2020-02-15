@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'components';
 import { siteName } from '../../../config/website';
 import './styles.scss';
 
