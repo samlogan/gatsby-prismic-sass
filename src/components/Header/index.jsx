@@ -1,10 +1,10 @@
 import React from 'react';
 import { Logo, Navigation } from 'components';
-import './Header.scss';
+import './styles.scss';
 
 const navigationLinks = [{ to: '#', text: 'Example Link', className: '' }];
 
-export const Header = () => (
+const Header = () => (
   <header className="header">
     <div className="wrapper">
       <Logo />
@@ -12,3 +12,5 @@ export const Header = () => (
     </div>
   </header>
 );
+
+export default Header;
