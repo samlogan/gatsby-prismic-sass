@@ -22,6 +22,12 @@ $font-weight-bold: 700;
 
 @mixin body-font() {
   font-family: 'Lato', Sans-Serif;
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+  line-height: 1.6em;
+  @include media-down(mobile) {
+    font-size: 14px;
+  }
 }
 
 @mixin h1 {
