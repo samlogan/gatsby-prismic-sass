@@ -23,3 +23,45 @@ $font-weight-bold: 700;
 @mixin body-font() {
   font-family: 'Lato', Sans-Serif;
 }
+
+@mixin h1 {
+  @include heading-font();
+  font-size: 35px;
+  line-height: 1.1em;
+  @include media-down(large-mobile) {
+    font-size: 30px;
+  }
+}
+
+@mixin h2 {
+  @include heading-font();
+  font-size: 30px;
+  line-height: 1.2em;
+  @include media-down(tablet) {
+    font-size: 30px;
+  }
+}
+
+@mixin h3 {
+  @include heading-font();
+  font-size: 26px;
+  line-height: 1.3em;
+  @include media-down(tablet) {
+    font-size: 22px;
+  }
+}
+
+@mixin h4 {
+  @include heading-font();
+  font-size: 20px;
+  line-height: 1.3em;
+  @include media-down(tablet) {
+    font-size: 18px;
+  }
+}
+
+@mixin h5 {
+  @include heading-font();
+  font-size: 16px;
+  line-height: 1.5em;
+}

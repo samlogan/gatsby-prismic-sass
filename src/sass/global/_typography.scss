@@ -44,23 +44,12 @@ h6 {
   }
 }
 
-h1 { font-size: 36px; line-height: 1.1em; }
-h2 { font-size: 32px; line-height: 1.1em; }
-h3 { font-size: 24px; }
-h4 { font-size: 16px; }
-h5 { font-size: 16px; }
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
 h6 { font-size: 14px; }
-
-@include media-down(mobile) {
-
-  h1 { font-size: 24px; }
-  h2 { font-size: 22px; }
-  h3 { font-size: 20px; }
-  h4 { font-size: 14px; }
-  h5 { font-size: 14px; }
-  h6 { font-size: 14px; }
-
-}
 
 // --------------------------------------------------------------------------
 //   Content Elements
