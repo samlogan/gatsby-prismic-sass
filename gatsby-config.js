@@ -36,7 +36,7 @@ if (GATSBY_CMD !== 'serve') {
   const requiredEnvVariables = ['SITE_URL', 'PRISMIC_REPO_NAME', 'API_KEY'];
   requiredEnvVariables.map(item => {
     if (!process.env[item]) {
-      throw Error(`Set ${item} env variable`);
+      throw Error(`Set ${item} env variable. See README`);
     }
     return null;
   });
